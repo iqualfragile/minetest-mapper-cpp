@@ -13,6 +13,7 @@
 #include <gdfontmb.h>
 #include <iostream>
 #include <sstream>
+#include <climits>
 #include "config.h"
 #include "PlayerAttributes.h"
 #include "TileGenerator.h"
@@ -94,10 +95,10 @@ TileGenerator::TileGenerator():
 	m_border(0),
 	m_db(0),
 	m_image(0),
-	m_xMin(0),
-	m_xMax(0),
-	m_zMin(0),
-	m_zMax(0),
+	m_xMin(INT_MAX),
+	m_xMax(INT_MIN),
+	m_zMin(INT_MAX),
+	m_zMax(INT_MIN),
 	m_geomX(-50),
 	m_geomY(-50),
 	m_geomX2(50),
